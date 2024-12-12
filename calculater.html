@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="calculater.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+</head>
+<body>
+    <div id="outer">
+        <div id="maindiv">
+            <div id="inputbox">
+                <input type="text" id="input" placeholder="">
+            </div>
+                <div id="buttonbox">
+                    <div>
+                        <button type="button">AC</button>
+                        <button type="button">DEL</button>
+                        <button type="button">%</button>
+                        <button type="button">/</button>
+
+                    </div>
+                    <div>
+                        <button type="button">7</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+                        <button type="button">*</button>
+                    </div>
+                    <div>
+                        <button type="button">4</button>
+                        <button type="button">5</button>
+                        <button type="button">6</button>
+                        <button type="button">-</button>
+                    </div>
+                    <div>
+                        <button type="button">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">+</button>
+                    </div>
+                    <div>
+                        <button type="button">0</button>
+                        <button type="button">00</button>
+                        <button type="button">.</button>
+                        <button type="button">=</button>
+                    </div>
+                </div>
+                
+
+        </div>
+    </div>
+    <script>
+        //  console.log(a);
+        //  console.log(n);
+        
+        //  for(let i=0; i<n.length; i++){
+            //     console.log(n[i]);
+            
+            //  }
+            
+            // n.forEach(test);
+            
+            // function test(item){
+                //     console.log(item);
+                
+                // }
+ let a=document.querySelectorAll('button')
+        let n=Array.from(a)
+        let string="";
+        // console.log(string);
+        
+n.forEach((item)=>{
+    item.addEventListener('click', function(e){
+        let val = e.target.innerHTML;
+        if (val=="=") {
+            string=eval(string)
+            input.value=string
+        }else if(val=="AC"){
+            string='';
+            input.value = string;  
+        }else if(val=="DEL"){
+                    //string=val;
+                    string.length;
+
+                  string=string.substring(0,string.length-1)
+                  input.value= string;
+
+        }else{
+                string+=val;
+                input.value = string;     
+        }
+        
+    })
+    
+});
+
+// function test(item){
+    
+    
+// }
+
+
+
+
+
+    </script>
+</body>
+</html>
