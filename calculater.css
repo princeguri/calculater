@@ -5,7 +5,7 @@
 }
 #outer{
     height: 600px;
-    background-color:red;
+    background-color:green;
     display: flex;
     justify-content: center;
     align-items: center;
